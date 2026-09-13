@@ -5,6 +5,16 @@ description: Full inspiration-to-prototype workflow for design and frontend task
 
 # inspo — intake → references → divergence → prototypes → canvas → refine → handoff
 
+> **Source of the method:** `PROTOCOL.md` at the library root is vendor-neutral and
+> authoritative. This skill is the Claude-side wrapper. If the two ever disagree,
+> PROTOCOL.md wins — and fix the drift rather than editing around it. An earlier copy of
+> this protocol lived only in the installed `~/.claude/` copy and was destroyed by a
+> `cadre sync`; that is why the method now lives with the corpus, not with the client.
+>
+> Prefer the MCP server when it is registered (`select_divergent_references`,
+> `get_reference_image`, ...) — same logic, fewer shell calls:
+> `claude mcp add inspo -- python3 "$LIB/_library/mcp_server.py"`
+
 ```
 LIB="/Users/dhaban/Documents/Design Work/WEB_DESIGN_INSPIRATION_pinterest_2026-08-26 2"
 PROTO="./_prototypes"

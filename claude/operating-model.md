@@ -86,6 +86,30 @@ the cheapest tool that does it well; reserve premium/scarce capacity for high-le
 
 Right-sizing reduces process and speculative scope. It does not rename incomplete established work as an MVP.
 
+## Capability routing — one lead, different layers
+Cadre owns the route, scope, truth and final claim. Capabilities plug into that route; they do not replace it:
+
+| Layer | Job |
+|---|---|
+| **Skill** | a reusable method for a bounded kind of work |
+| **MCP / connector** | live access to an external system or authoritative data |
+| **Plugin** | an installable bundle that may provide skills, MCP servers, apps or supporting resources |
+| **Pack** | domain contracts, probes and gates that specialize Cadre without changing its core |
+
+At task start, discover what is actually available; never assume a named capability is installed, connected,
+authorized or healthy. Use the smallest sufficient route: local repository evidence before external access,
+one fitting skill before overlapping playbooks, and an existing authoritative connector before generic search.
+Do not install or connect a plugin merely because it may be useful. When a required capability is absent,
+use a safe fallback if one can still satisfy the work; otherwise explain the missing capability and its material
+effect. Installation or connection is not proof that the capability works—verify the first real operation.
+
+Capability output arrives as evidence, not truth. Reconcile it against code/runtime and the project adapter;
+independently verify consequential delegated or automated work. External mutations—messages, tickets,
+calendar changes, deployments, records and similar actions—must be inside the user's authorized task and
+have their target and material effect resolved before execution. Skills choose methods, MCPs provide access,
+plugins deliver capabilities and packs provide domain material; none may silently expand product scope,
+weaken established acceptance, or move durable project truth out of the repository.
+
 ## Tool-agnostic truth (multiple tools may contribute)
 Work may arrive via different tools/sessions. The **code + STATE doc/git are the truth** — never assume one
 tool authored all changes; reconcile from them. Keep the STATE doc + open-loops ledger current so any tool

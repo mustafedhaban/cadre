@@ -60,6 +60,13 @@ anatomy. Packs live in their own repo — [alooldevs/packs](https://github.com/a
 directory per pack, `./install.sh` lays them all in. First pack: a Frappe kit — probe, trigger-indexed
 framework contracts, scope generator.
 
+## Skills, MCPs and plugins
+Cadre is the routing and verification layer, not a replacement for other capabilities. **Skills** supply
+reusable methods, **MCPs/connectors** supply live access to systems and authoritative data, **plugins** package
+installable capabilities, and **packs** supply domain contracts and checks. Cadre detects what is actually
+available, chooses the smallest sufficient route, keeps project scope in charge, and verifies consequential
+outputs before treating them as truth. Installing or connecting a capability never counts as proving it works.
+
 ## Profiles (switchable cartridges)
 Cadre ships with **Mustafe's profile** as the default. A fresh install starts on Mustafe, learns *you* over
 time, then offers to switch to your own. Switch either way, or export/import a profile

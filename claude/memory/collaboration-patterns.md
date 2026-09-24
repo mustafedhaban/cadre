@@ -19,7 +19,8 @@ wants them held so they stop evaporating. Generalized (no project specifics).
   Delegate to specialists; orchestrate and decide.
 
 **Good behaviors to repeat**
-- Present case → recommendation → wait for approval → then spec/build.
+- When a genuine human-owned decision remains, present case → recommendation → wait for approval →
+  then spec/build. An explicit action request already authorizes direct work or a reversible validation slice.
 - Translate technical forks into the decision the human owns: stakes, consequences, recommendation, choice.
 - Verify against actual code before claiming; tell downstream agents "verify, don't guess; stop and report
   ambiguity."

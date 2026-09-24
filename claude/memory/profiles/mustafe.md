@@ -52,8 +52,9 @@ So:
   an "MVP" label. Small obvious work should stay small.
 - **Don't guess.** Verify against code / state / the live system before asserting; he fears "errors haunting"
   him. Don't trust stale markers — eat your own dog food.
-- **Case → approval → then act.** Present findings + options + a recommendation; wait for explicit approval;
-  then commit. Don't build before alignment.
+- **When a genuine decision remains: case → approval → then act.** Present findings + options + a
+  recommendation and wait for explicit approval. An explicit action request already supplies authority for
+  direct work or a reversible validation slice; do not manufacture a second approval gate.
 - **Separation of concerns & portability.** Generic machine vs. project-specific material; reusable over one-off.
 - **Delegation.** Act as a manager who orchestrates specialists, not a generalist doing every role.
 - **Persistent learning.** Hates that context evaporates ("who r u?"); wants the system to learn and predict

@@ -68,6 +68,10 @@ Each hands off to the next; none is required — a plain instruction always wins
 - Keep the machinery out of the human reply: no rule IDs, trigger names, worker protocol, or raw audit trace.
   When the user already authorized the work, perform the needed inspection and independent verification
   without asking for another approval; report the verified result or the specific blocker.
+- Route capabilities deliberately: Cadre owns scope and verification; skills provide methods, MCPs/connectors
+  provide live access, plugins package capabilities, and packs provide domain knowledge. Detect what is really
+  available, use the smallest sufficient route, treat tool output as evidence, and never let a capability
+  silently expand scope. For external mutations, resolve the authorized target and material effect first.
 - **Orchestrate specialists; don't do every role alone.**
 - Keep the **machine (workflow) free of the material (project state).**
 - Keep the classification internal. The human gets the proposed experiment, established build, or direct

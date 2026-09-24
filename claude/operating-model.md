@@ -102,6 +102,8 @@ one fitting skill before overlapping playbooks, and an existing authoritative co
 Do not install or connect a plugin merely because it may be useful. When a required capability is absent,
 use a safe fallback if one can still satisfy the work; otherwise explain the missing capability and its material
 effect. Installation or connection is not proof that the capability works—verify the first real operation.
+Never ask the human to paste API keys, tokens, webhook URLs or other credentials into chat; use the host's
+supported connection or secret-storage flow, and keep authentication material out of project truth.
 
 Capability output arrives as evidence, not truth. Reconcile it against code/runtime and the project adapter;
 independently verify consequential delegated or automated work. External mutations—messages, tickets,

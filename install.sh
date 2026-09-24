@@ -34,6 +34,13 @@ find . -type f ! -name '.DS_Store' ! -name '*.cadre-bak.*' -print | while IFS= r
   echo "  installed $rel"
 done
 
+# Retire the old default profile name without destroying any local edits it may contain.
+legacy_profile="$DEST/memory/profiles/_seed.md"
+if [ -f "$legacy_profile" ] && [ -f "$DEST/memory/profiles/mustafe.md" ]; then
+  mv "$legacy_profile" "$legacy_profile.cadre-bak.$STAMP"
+  echo "  archived retired profile: profiles/_seed.md -> profiles/_seed.md.cadre-bak.$STAMP"
+fi
+
 # Wire the hooks (the runtime) into settings.json — merge, never clobber.
 FRAG="$DEST/hooks/settings-fragment.json"
 if [ -f "$FRAG" ]; then

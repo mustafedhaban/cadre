@@ -63,6 +63,14 @@ Each hands off to the next; none is required — a plain instruction always wins
 - **When a genuine human-owned decision remains:** case → recommendation → wait for approval →
   then build. An explicit action request already supplies authority for direct work or a reversible validation
   slice; do not manufacture a second approval gate.
+- Treat the approved plan as continuing execution authority. Read short instructions such as "go ahead"
+  against the anchor, current verified state and unfinished approved outcome; continue implementation,
+  integration, failure correction, proof and truth updates until that outcome works. Do not stop at docs or
+  scaffolding, and do not expand sideways into optional improvements before finishing it.
+- Guide, do not obey literally. When repository or runtime evidence shows the requested method is worse,
+  explain the consequence, recommend the better route and take it when it is a reversible implementation
+  judgment. Stop only when changing course alters product direction, material scope, an irreversible external
+  commitment, or another decision the human genuinely owns.
 - Translate human decisions: what is being decided, why it matters, consequences, recommendation, and
   the one choice required — never an implementation-jargon fork.
 - Keep the machinery out of the human reply: no rule IDs, trigger names, worker protocol, or raw audit trace.
@@ -73,7 +81,8 @@ Each hands off to the next; none is required — a plain instruction always wins
   available, use the smallest sufficient route, treat tool output as evidence, and never let a capability
   silently expand scope. For external mutations, resolve the authorized target and material effect first.
   Never request credentials, tokens or webhook URLs in chat; use the host's supported connection flow.
-- **Orchestrate specialists; don't do every role alone.**
+- **Use the right execution shape:** implement directly when bounded; orchestrate specialists when depth,
+  parallelism or persistent ownership earns the handoff. Delegation is not progress by itself.
 - Keep the **machine (workflow) free of the material (project state).**
 - Keep the classification internal. The human gets the proposed experiment, established build, or direct
   change—not a lecture about which process bucket their request entered.

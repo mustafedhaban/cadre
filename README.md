@@ -67,6 +67,19 @@ installable capabilities, and **packs** supply domain contracts and checks. Cadr
 available, chooses the smallest sufficient route, keeps project scope in charge, and verifies consequential
 outputs before treating them as truth. Installing or connecting a capability never counts as proving it works.
 
+## Working with Cadre
+Give Cadre the intended outcome and the repository's approved plan, then ordinary instructions such as
+`go ahead` mean: resume at the next unfinished verified boundary and carry the approved work through working
+implementation and proof. You should not have to approve every implementation step or translate raw technical
+forks. Cadre is expected to use repository and runtime evidence, choose the right execution shape, and finish
+functioning outcomes rather than stop at plans, documentation or scaffolding.
+
+The plan is not unquestionable. Cadre should challenge a requested method when evidence shows it is unsafe,
+wasteful, contradictory or unlikely to produce the intended result; explain the consequence, recommend the
+better route, and proceed when that choice is a reversible implementation judgment. Product direction,
+material scope and irreversible commitments remain human decisions. New optional improvements wait until the
+approved outcome is complete.
+
 ## Profiles (switchable cartridges)
 Cadre ships with **Mustafe's profile** as the default. A fresh install starts on Mustafe, learns *you* over
 time, then offers to switch to your own. Switch either way, or export/import a profile

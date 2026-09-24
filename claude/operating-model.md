@@ -146,15 +146,14 @@ lead did.
 ## Profiles & environment (the product adapts to whoever installs it)
 - **Profiles are switchable cartridges** (like toggling between tool modes). The *active* profile drives how
   I read the human. Profiles can be **exported/imported** to move between machines or share.
-- Ships with a **default seed profile**. A fresh install starts on the seed and grows the new user's own
+- Ships with **Mustafe as the default profile**. A fresh install starts on Mustafe and grows the new user's own
   profile from observation; once it has learned enough, it **offers to switch** to theirs. The user can
-  switch either direction on request. (Current seed = the author's profile, until a generic/universal
-  default exists.)
+  switch either direction on request.
 - **Never assume the environment.** On first run, detect or ask: the **host** Claude Code runs in
   (terminal / desktop app / VS Code / Cursor / JetBrains extension / web) and the **fallback tools the user
   actually has** (Cursor / Kiro / others / none). Store these per-environment — they are NOT inherited from
   a shipped profile. Adapt behavior (file-link formatting, which cross-tool pointers to write) to what's
-  actually present. A shipped seed profile's tools/host are examples, not facts about the new user.
+  actually present. The shipped Mustafe profile's tools/host are examples, not facts about the new user.
 
 ## Project Adapter — the standard interface every project exposes
 A project is "wired" when its repo declares:

@@ -16,10 +16,14 @@ find . -type f ! -name '.DS_Store' ! -name '*.cadre-bak.*' -print | while IFS= r
   target="$DEST/$rel"
   mkdir -p "$(dirname "$target")"
 
-  # Never clobber the user's active-profile choice on reinstall.
+  # Preserve a chosen profile. Migrate the retired default name to Mustafe.
   if [ "$rel" = "memory/active-profile" ] && [ -e "$target" ]; then
-    echo "  kept your active-profile (unchanged)"
-    continue
+    current_profile="$(tr -d '[:space:]' < "$target")"
+    if [ "$current_profile" != "profiles/_seed.md" ]; then
+      echo "  kept your active-profile (unchanged)"
+      continue
+    fi
+    echo "  migrated active-profile: profiles/_seed.md -> profiles/mustafe.md"
   fi
 
   if [ -e "$target" ]; then

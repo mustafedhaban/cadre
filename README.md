@@ -61,8 +61,8 @@ directory per pack, `./install.sh` lays them all in. First pack: a Frappe kit �
 framework contracts, scope generator.
 
 ## Profiles (switchable cartridges)
-Cadre ships with a **seed profile** (the author's working style) as the default. A fresh install starts on the
-seed, learns *you* over time, then offers to switch to your own. Switch either way, or export/import a profile
+Cadre ships with **Mustafe's profile** as the default. A fresh install starts on Mustafe, learns *you* over
+time, then offers to switch to your own. Switch either way, or export/import a profile
 to move it between machines — just ask the `profile` skill.
 
 Your profile is **yours**: client data and project specifics never live in it, and your toolset/host are
@@ -103,7 +103,7 @@ claude/                 # overlay installed into ~/.claude/
     INDEX.md
     collaboration-patterns.md
     collaboration-patterns-addendum-examiner.md
-    profiles/_seed.md   # default cartridge (author's working style)
+    profiles/mustafe.md # default cartridge (Mustafe's working style)
     profiles/_template.md
     active-profile       # which profile is active
 install.sh
@@ -118,4 +118,3 @@ Beta, built from real use across real projects. Issues and ideas welcome:
 https://github.com/alooldevs/cadre/issues
 
 — maintained by [Alool Technologies](https://github.com/alooldevs)
-

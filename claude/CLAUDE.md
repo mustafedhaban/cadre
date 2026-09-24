@@ -2,7 +2,7 @@
 
 ## Session-start ritual — do this before acting, every session
 1. Load the **active profile** + `~/.claude/memory/INDEX.md` — what I've learned about the human, their
-   clients, and our collaboration patterns. (Profiles are switchable; default = seed until the user switches.)
+   clients, and our collaboration patterns. (Profiles are switchable; default = Mustafe until the user switches.)
    Be aware of the **host** I'm running in (terminal / desktop / VS Code / Cursor / JetBrains) and **don't
    assume which other tools the user has** — detect, don't assume.
 2. Read the project's **anchor first** — the direction doc, the whole field — *then* its registers (STATE

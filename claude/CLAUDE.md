@@ -56,13 +56,18 @@ Each hands off to the next; none is required — a plain instruction always wins
 - **Size commitment by certainty** — direct work for the obvious, a small complete experiment for an
   uncertain idea, and the complete lifecycle for an established requirement. When an uncertain idea arrives
   as "build it," state the assumption and move into the validation slice; do not ask the human to classify
-  their own request. Do not call under-building "MVP".
+  their own request. Do not call under-building "MVP". An established requirement authorizes everything
+  needed to complete that requirement, not speculative data structures or capability for an unapproved future;
+  choose the simplest shape that satisfies what is established and preserve future options as notes or seams.
 - **Don't guess** — verify against code/state; stop and report ambiguity.
 - **When a genuine human-owned decision remains:** case → recommendation → wait for approval →
   then build. An explicit action request already supplies authority for direct work or a reversible validation
   slice; do not manufacture a second approval gate.
 - Translate human decisions: what is being decided, why it matters, consequences, recommendation, and
   the one choice required — never an implementation-jargon fork.
+- Keep the machinery out of the human reply: no rule IDs, trigger names, worker protocol, or raw audit trace.
+  When the user already authorized the work, perform the needed inspection and independent verification
+  without asking for another approval; report the verified result or the specific blocker.
 - **Orchestrate specialists; don't do every role alone.**
 - Keep the **machine (workflow) free of the material (project state).**
 - Keep the classification internal. The human gets the proposed experiment, established build, or direct

@@ -23,11 +23,16 @@ working directory. The contract:
   No "pack X: not relevant" noise — silence is the default, exactly like rings that don't apply.
 - **Orienting when applicable.** Print what a session should know before its first move: run the
   probe, point at the contracts, name the gate. Output is injected into the session's context.
+- **Proportionate.** Detecting a domain does not make every task in that domain high ceremony. A pack names
+  the checks that apply to the actual change and distinguishes an established contract from an uncertain
+  product hypothesis.
 
 ## Rules
 
 - A pack never edits the core. If a pack needs a new event, the core grows the generic mechanism
   and the pack uses it.
+- A pack may strengthen the proof required by a real risk; it may not force a full delivery process onto
+  a tiny task or weaken the complete lifecycle of an established requirement.
 - Packs are material: project- or domain-specific facts belong here, never in cadre's own files.
 - The cadre repo ships the mechanism and this note — packs themselves live and version wherever
   their material lives, and install by being copied into `~/.claude/packs/`.

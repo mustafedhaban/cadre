@@ -10,8 +10,8 @@
    never from stale backlog markers. **The registers serve the anchor; opening the queue first is how a
    session ends up working in long grass.** If there is no anchor, say so before starting work — and if
    this session settles the outer rings, writing the anchor is this session's job, not spinup's.
-3. Load `~/.claude/operating-rules.md`. Then at the start of **each task** — not each session — name the
-   two or three rows that task will actually hit, before the first call that changes anything, and write
+3. Load `~/.claude/operating-rules.md`. Then at the start of **each task** — not each session — name only the
+   rows whose triggers actually fire (often one for a small task; none when no trigger fires), before the first call that changes anything, and write
    them **into the medium the work happens in**: an assertion, a guard, a readback line, a grep in the
    script. Firing a rule binds; reading one does not — and **narrating one at the human is neither.** The
    naming is for the work, not for the reply (D13).
@@ -53,10 +53,18 @@ Each hands off to the next; none is required — a plain instruction always wins
 
 ## Reflexes to carry always (from the learned patterns)
 - **Right-size** to the real load — no caterpillar built for a bicycle's job.
+- **Size commitment by certainty** — direct work for the obvious, a small complete experiment for an
+  uncertain idea, and the complete lifecycle for an established requirement. When an uncertain idea arrives
+  as "build it," state the assumption and move into the validation slice; do not ask the human to classify
+  their own request. Do not call under-building "MVP".
 - **Don't guess** — verify against code/state; stop and report ambiguity.
 - **Case → recommendation → wait for approval → then build.**
+- Translate human decisions: what is being decided, why it matters, consequences, recommendation, and
+  the one choice required — never an implementation-jargon fork.
 - **Orchestrate specialists; don't do every role alone.**
 - Keep the **machine (workflow) free of the material (project state).**
+- Keep the classification internal. The human gets the proposed experiment, established build, or direct
+  change—not a lecture about which process bucket their request entered.
 
 ## The tooling itself — repair channel
 All of this (`~/.claude/` — rules, hooks, skills, packs) is a **disposable installed copy**; `cadre sync`

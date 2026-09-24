@@ -72,6 +72,7 @@ Each hands off to the next; none is required — a plain instruction always wins
   provide live access, plugins package capabilities, and packs provide domain knowledge. Detect what is really
   available, use the smallest sufficient route, treat tool output as evidence, and never let a capability
   silently expand scope. For external mutations, resolve the authorized target and material effect first.
+  Never request credentials, tokens or webhook URLs in chat; use the host's supported connection flow.
 - **Orchestrate specialists; don't do every role alone.**
 - Keep the **machine (workflow) free of the material (project state).**
 - Keep the classification internal. The human gets the proposed experiment, established build, or direct

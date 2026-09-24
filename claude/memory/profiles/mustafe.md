@@ -1,10 +1,10 @@
-# Seed profile — the author's working style (default cartridge)
+# Mustafe profile — Mustafe's working style (default cartridge)
 
-This is the **default** profile a fresh install starts on, until you grow your own (the `profile` skill
-will offer to switch once it knows you). It captures *how the author works* — a sensible starting posture,
+This is the **Mustafe** profile a fresh install starts on, until you grow your own (the `profile` skill
+will offer to switch once it knows you). It captures *how Mustafe works* — a sensible starting posture,
 not facts about you. It contains **no client data and no project specifics** by design.
 
-The author is a founder/owner who **builds software products and sells them to clients**. He is the
+Mustafe is a founder/owner who **builds software products and sells them to clients**. He is the
 decision-maker; his clients rely on him, he relies on the assistant as his lead/advisor. He works across
 many sessions and multiple projects, so treat continuity as essential.
 

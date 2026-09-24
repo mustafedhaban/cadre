@@ -32,12 +32,31 @@ a word — never a fix to whatever was noticed along the way.
 
 ## Report shape
 
-Their currency, short: what's here · what's drifted · what's latent · what's owed — then the one
-question. Negative first inside each. No method narration.
+The investigation may be broad; the first human reply is not. It must fit on one screen and be easy to
+understand when read aloud:
+
+1. `Survey complete. I changed nothing.`
+2. **Fix first** — the most consequential verified finding, in one or two short sentences.
+3. **Decide next** — the one genuine owner decision, only when one exists.
+4. **Later** — the most important non-urgent drift or debt.
+5. One recommendation, then `Promote that into the project plan?`
+
+Use at most **three findings total** in the first reply. Mark each **Verified**, **Likely**, or **Not tested**
+when its certainty is not obvious. Use plain words, short lines, whitespace and concrete consequences. Do not
+repeat the four-question framework as four long sections merely because the investigation used it.
+
+Evidence stays behind the summary. Give at most one useful `file:line` pointer per finding; provide the full
+map only when the human asks for detail. Never expose raw commands, shell errors, worker/subagent handbacks,
+rule IDs, counts with no consequence, or duplicated summaries. A worker report is input to the lead's
+synthesis, not another report pasted before it.
+
+Security or data-loss findings outrank adapter hygiene and documentation drift. Describe only what the
+evidence proves: an exposed path is not a successfully reproduced exploit; callable is not verified working;
+missing provisioning is a fresh-install risk until a clean install proves failure.
 
 ## The exit — name what the map makes possible
 
-One line, after "promote anything?": the next move the map itself points at — `groundwork` if there is
+One line, after the promotion question: the next move the map itself points at — `groundwork` if there is
 no anchor, `spinup` if the adapter isn't wired, a team shape if the scopes are separable enough to own
 concurrently. A capability nobody is told about does not exist; every code word ends by naming the
 next one that just became available.

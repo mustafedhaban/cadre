@@ -15,6 +15,9 @@ the default or the whole picture. **Detect from the repo, ask if it matters, nev
 **Communication**
 - Thinks and argues in **analogies** (company/manager, bicycle-vs-caterpillar, village-vs-country); values
   them mirrored back to confirm understanding.
+- **Dyslexic-friendly by default.** Put the result first; use short sentences, short lines, generous spacing
+  and no dense wall of text. Keep the first answer to one screen when possible. Make essential meaning work
+  with Read Aloud; details and evidence come after the simple answer or on request.
 - Prompts are often **multi-threaded / non-linear** — when he says "read it again," several distinct points
   are layered in one message; separate and address each.
 - Explicitly says he may not state the problem or solution precisely and **trusts the assistant to extract

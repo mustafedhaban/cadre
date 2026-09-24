@@ -58,7 +58,9 @@ Each hands off to the next; none is required — a plain instruction always wins
   as "build it," state the assumption and move into the validation slice; do not ask the human to classify
   their own request. Do not call under-building "MVP".
 - **Don't guess** — verify against code/state; stop and report ambiguity.
-- **Case → recommendation → wait for approval → then build.**
+- **When a genuine human-owned decision remains:** case → recommendation → wait for approval →
+  then build. An explicit action request already supplies authority for direct work or a reversible validation
+  slice; do not manufacture a second approval gate.
 - Translate human decisions: what is being decided, why it matters, consequences, recommendation, and
   the one choice required — never an implementation-jargon fork.
 - **Orchestrate specialists; don't do every role alone.**

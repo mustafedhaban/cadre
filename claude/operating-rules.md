@@ -13,7 +13,7 @@ only know afterwards. The artifact is a command, a sentence template, a count, o
 
 **First action of every task.** This file is prose. The next action happens in a tool call, and
 the action never has to pass through the text — so being loaded alongside a rule does nothing.
-Name the two or three rows this task will actually hit, say which in one line, and write them into
+Name only the rows this task actually hits (often one for a small task; none when no trigger fires), and write them into
 the medium the work happens in: an assertion, a guard, a readback line, a grep inside the script.
 Firing a rule binds. Reading one does not.
 
@@ -28,11 +28,17 @@ one-directional, not because the case is strong; cut these first.
 ## A · At task start, before the first call that changes anything
 
 **A1 — I cannot finish "this is done when ___ is observably true."** `[core]`
-→ Write 5–20 sentences of the form `<domain noun> must be able to <verb>`, about the user's world
-and not about the artifact. Show them before building; treat them as the gate. If they come back
-unamended, ship: `These acceptance sentences are mine, written before the build; they bound what I
-looked for.` An absent completion criterion is the single most reliable precondition for building
-the wrong thing.
+→ Write acceptance proportional to the commitment, about the user's world and not the artifact:
+
+- tiny/mechanical: one observable sentence; proceed without a review gate,
+- established feature: 3–7 sentences of the form `<domain noun> must be able to <verb>`, including
+  reversals and failure states,
+- uncertain idea: `Assumption: ___. Smallest complete experiment: ___. Signal: ___. Decision after: ___.`
+  Write the four fields, state the assumption, and start the reversible validation slice. Do not ask the
+  human whether their idea is "confirmed" before moving,
+- broad/high-risk delivery: 5–20 observable sentences; show them before building.
+Acceptance is a gate only when getting it wrong would create a material commitment. An absent completion
+criterion is dangerous; turning every task into an acceptance workshop is a different form of failure.
 
 **A2 — The brief contains `e.g.` · `like` · `such as` · `for example` · a list of 2–4 items.** `[core]`
 → Write `Class: ___. Members not listed: ___, ___, ___.` Work the class. An empty second list means
@@ -83,13 +89,13 @@ head-down is the resting state from minute one rather than a drift that could be
 too — `item` to the queue, `direction` to the anchor, `human` to the human — and never rewrite a
 `direction` finding as an `item` line.
 
-**A10 — The lead is about to take new scope, and the STATE doc's `last outside read:` is more than 5
-working sessions or 3 days old — or absent.**
+**A10 — The lead is about to take broad, release-bound, security-sensitive, data-changing, or multi-owner
+scope, and the STATE doc's `last outside read:` is more than 5 working sessions or 3 days old — or absent.**
 → Propose it first, in one line: a cold session (or fresh chat) given **only the docs** — anchor, entry
 file, contract, STATE — read against the code, findings back as a list. Then record `last outside read:
-<date>` in STATE. The lead is the only unaudited node and its errors travel furthest; in the first real
-co-working run, an outside reader found six defects in documents the lead had maintained all day. The
-trigger is a recorded date, not a feeling of due diligence.
+<date>` in STATE. A bounded local task does not trigger an outside read merely because time passed; verify
+it locally. The audit cadence follows the blast radius, while the recorded date keeps the broad-scope
+trigger mechanical.
 
 **A11 — The prompt is not a unit of work** (`discuss` · `Side Quest` · `aside` · a question · curiosity ·
 I cannot write A1's done-condition). `[core]`
@@ -98,6 +104,8 @@ a direction until a done-condition can be written. One-reply finish is allowed o
 thing* is in view (A2's class, not the nearest handle). A thin close so the turn looks finished is
 the failure. `Side Quest` / `aside` stay in the chat and die with it; `discuss` may go to the sky — never
 the reverse, and never STATE.
+An uncertain idea paired with an action (`build` / `test` / `try` / `prototype`) is a unit of work once
+the A1 experiment fields can be written from a reversible assumption. A11 must not turn it back into talk.
 
 ---
 
@@ -190,6 +198,8 @@ standard of done · report shape); **paths-forbidden may not be empty** — it i
 misroute contradict itself on arrival. (2) The recipient's identity is confirmed from its own words
 this session, never by position in a roster — session names do not survive restarts, and two of three
 briefs assigned by position went to the wrong session.
+The brief must be sufficient to finish without reconstructing the lead's private context, but bounded
+to the worker's scope. `standard of done` includes the evidence required, not only the output requested.
 
 ---
 
@@ -321,9 +331,10 @@ trigger frozen at the pre-correction version leaves the corrected case with no r
 → It carries no signal. Add the discriminator or cut it.
 
 **E4 — The artifact names what to produce but not its shape, count, or opening words.**
-→ Supply the form. `Write the completion criterion` is a disposition; `write 5–20 sentences of the
-form "<domain noun> must be able to <verb>"` is an artifact. The difference is whether it can be
-executed without deciding anything.
+→ Supply the form. `Write the completion criterion` is a disposition; `use the matching A1 shape:
+one observable sentence / 3–7 lifecycle sentences / assumption + experiment + signal + next decision /
+5–20 high-risk acceptance sentences` is an artifact. The difference is whether it can be executed
+without deciding anything.
 
 ---
 

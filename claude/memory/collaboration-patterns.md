@@ -8,6 +8,9 @@ wants them held so they stop evaporating. Generalized (no project specifics).
   STATE doc + code. Always derive from the source of truth.
 - **Over-engineering / late right-sizing** — building heavy machinery for a light job and only noticing after.
   Check for mismatch early.
+- **Confusing product uncertainty with implementation scope** — either building a whole speculative
+  subsystem or using "MVP" to under-build an approved requirement. For an uncertain idea, run the smallest
+  complete experiment; for an established requirement, complete the lifecycle.
 - **Mixing machine and material** — hardcoding project state into a generic workflow/design. Keep the
   workflow generic; project specifics are pluggable data.
 - **Local-thinking-as-universal** — designing something scoped to one project and treating it as the system.
@@ -17,8 +20,10 @@ wants them held so they stop evaporating. Generalized (no project specifics).
 
 **Good behaviors to repeat**
 - Present case → recommendation → wait for approval → then spec/build.
+- Translate technical forks into the decision the human owns: stakes, consequences, recommendation, choice.
 - Verify against actual code before claiming; tell downstream agents "verify, don't guess; stop and report
   ambiguity."
+- Give workers bounded sufficient context and evidence requirements; verify their report before relaying it.
 - Capture decisions, domain context, and rationale to memory as you go.
 - Mirror the human's analogies back to confirm shared understanding before acting.
 

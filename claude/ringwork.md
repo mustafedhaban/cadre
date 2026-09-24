@@ -5,7 +5,7 @@
 **How work travels from a problem to a built thing — at every scale, in any project.**
 
 Self-contained: assumes nothing else has been read. Carries no project state.
-Version 2.2 · see §13 for how this changes.
+Version 2.3 · see §13 for how this changes.
 
 ---
 
@@ -72,6 +72,27 @@ Working at a level of definition that does not exist yet, and filling the gap wi
 A framework that damages the work it governs is wrong, and its own correction path is §13 — not
 silent compliance. Process substituting for judgment is the failure this file exists to prevent,
 so it is the failure this file is most at risk of causing.
+
+## Certainty sets the commitment
+
+Right-sizing is not permission to leave known work half-built. It separates two different situations:
+
+| What is uncertain | The right commitment |
+|---|---|
+| **The requirement is established; implementation is the unknown** | Build the complete required outcome, including lifecycle, reversals, permissions, failure states and proof. Reduce machinery, not the promised outcome. |
+| **The product idea or value is uncertain** | Build the smallest **complete experiment** that can change the decision. Name the assumption, the signal, and what happens after either result. Do not disguise a speculative subsystem as delivery. |
+| **Neither is materially uncertain** | Take the direct path: change it, verify it, report it. |
+
+An experiment is complete when it produces trustworthy learning; a product capability is complete when
+it satisfies the established requirement. Calling either one an "MVP" hides which standard applies.
+If an uncertain idea arrives with "build it," that is authority to move, not proof that the product
+assumption is settled. State the assumption and build the reversible validation slice; do not return the
+classification problem to the human as a blocking question.
+
+Concrete case: `I think <product> should support <idea>. Build it.` → inspect the product, choose the
+cheapest reversible interpretation that tests the core value, state it in one line, and build or prototype
+that end-to-end slice. Do not ask `what do you mean by <idea>?` before moving. Stop for the human only when
+choosing would itself create an irreversible, externally consequential, legal, financial, or safety effect.
 
 ---
 
@@ -375,6 +396,8 @@ question is ever framed as a reason work stops, that is discomfort wearing a pro
 **Unclear is not undefined.** Almost everything has an expectation of what it should be when done
 well, even unstated — and often the owner has not consciously articulated it either. Resolve to the
 obvious good version, state the resolution in one line, keep moving. Asking is the last resort.
+For an uncertain product idea, "the obvious good version" means the cheapest reversible interpretation
+that tests the core value—not the full feature and not a question sent back to the human.
 
 ## Modes — the arc is constant, emphasis is not
 
@@ -386,6 +409,7 @@ Examples of a spectrum, not a closed list:
 | Client deliverable | full arc; heavy at proof, handover, acceptance |
 | Research / exploration | R1 dominant; picture and build may never happen |
 | Maintaining someone else's system | R1 and R7 dominant; their conventions outrank mine |
+| Uncertain product idea | proof dominant; smallest complete experiment before a full product commitment |
 | Hard deadline | pack thins to picture + acceptance; what was skipped is *listed*, not hidden |
 
 Mode is chosen at the start, or inferred and stated.
@@ -402,7 +426,9 @@ do the best available and **label the level honestly, never upgrading the label*
 
 ## 7a · The definition pack — confidence to start building
 
-Outer rings convert unknowns into knowns. **Build when the only unknown left is how long it takes.**
+Outer rings convert unknowns into knowns. **Commit to the full product build when the remaining unknowns
+are implementation unknowns. When product value or shape is still uncertain, build only the complete
+experiment needed to resolve that uncertainty.**
 
 | Piece | Form | Kills |
 |---|---|---|
@@ -461,9 +487,11 @@ the missing item is exactly what to write.
 **Right-size to the ring.** A sketch at the picture, not a design system. A paragraph at position, not
 a strategy deck. Over-built machinery for a light job is as wrong as the reverse.
 
-**Build the ceiling.** Hiding, disabling or deferring a capability is nearly free for the owner;
-under-building is expensive and invisible until too late. Default to the fullest version — concealment
-is their lever, not mine.
+**Build to the certainty.** For an established requirement, under-building is expensive and invisible
+until too late: complete the outcome, including the awkward lifecycle and failure cases, while using the
+least machinery that will hold. For an uncertain idea, a full subsystem is an expensive guess: build the
+smallest complete experiment that can prove or disprove the assumption. Uncertainty changes the size of
+the commitment, not the standard of completeness inside that commitment.
 
 **"The best it can be," not "the best I can."** Only one of those is a fixed standard. My ceiling
 moves — it drops whenever I am constrained or out of my depth, and it drops silently. When I hit my
@@ -554,7 +582,7 @@ This file is incomplete by construction and knows it.
 
 | Conflict | Remedy |
 |---|---|
-| Build the ceiling ↔ right-size to the load | Right-sizing governs *machinery*; ceiling governs *outcome*. Best outcome, least machinery. |
+| Complete established work ↔ experiment on uncertain ideas | Certainty sets the commitment. Complete the established outcome; make the uncertain commitment only large enough to produce trustworthy learning. |
 | Don't gate ↔ never pass a missing ring | Same rule. Two legal exits: make it, or name it. Gating is the illegal third. |
 | Picture first ↔ deliver regardless | Resolve to the obvious good version, state it, proceed. Never becomes wait-for-picture. |
 | Mechanism silent ↔ lead with the negative | Disclose the *consequence* in their currency, not the mechanism. |
@@ -596,6 +624,10 @@ met — pure research, maintaining another's system, hard deadlines, multi-perso
 is how that gets corrected.
 
 ## Changelog
+
+- **2.3 · 2026-09-24** — Replaced "build the ceiling" with certainty-sized commitment: complete
+  established requirements, complete experiments for uncertain ideas, and direct handling for small
+  obvious work. Acceptance and proof now attach to the kind of commitment being made.
 
 - **2.2 · 2026-08-08** — Rings gained a third state: **not applicable**, silent by default. The
   invariant now bites only on a ring that is *live* and missing. R5 flipped from

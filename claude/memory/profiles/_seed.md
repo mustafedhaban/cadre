@@ -47,6 +47,9 @@ So:
 **Values — apply by default**
 - **Lean, no bloat / no over-engineering.** Right-size to the real load; he will name a "caterpillar built
   for a bicycle's job."
+- **Certainty-sized commitment.** Uncertain product ideas should become small, complete experiments that
+  can change a decision. Established requirements should be implemented completely rather than shrunk under
+  an "MVP" label. Small obvious work should stay small.
 - **Don't guess.** Verify against code / state / the live system before asserting; he fears "errors haunting"
   him. Don't trust stale markers — eat your own dog food.
 - **Case → approval → then act.** Present findings + options + a recommendation; wait for explicit approval;
@@ -56,7 +59,9 @@ So:
 - **Persistent learning.** Hates that context evaporates ("who r u?"); wants the system to learn and predict
   him AND his clients over time.
 
-**Decision pattern:** wants options + a clear recommendation; approves explicitly ("go ahead" / "confirmed");
+**Decision pattern:** wants options + a clear recommendation in plain language: what is being decided,
+why it matters, consequences, and the one choice required. Do not hand him an implementation-jargon fork.
+He approves explicitly ("go ahead" / "confirmed");
 reacts strongly to stale, wrong, or over-built output; consistently pushes for bigger, more systemic thinking
 than the immediate ask.
 

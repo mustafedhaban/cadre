@@ -43,13 +43,20 @@ the skill is the judgment.
 - **Triage** (lead): process new ledger items → backlog / human decision / close.
 - **Delegate:** send the function to the right specialist, scoped.
 - **Synthesize + decide** (lead): consume distilled outputs; decide, or surface a real choice to the human.
+  A human decision is stated in ordinary language: what is being decided, why it matters, the consequence
+  of each viable option, the recommendation, and the one choice the human must make. Never hand over an
+  implementation vocabulary quiz such as "normalized or denormalized?".
 
 ## Source-of-truth rule
 Code is truth. The project's **STATE doc mirrors it.** Backlogs are **intent, not status.** Never report
 done/not-done from a backlog marker — derive from the STATE doc + code.
 
-## Definition of Done (atomic — same pass)
-code changed + STATE doc updated + backlog item retired + any discovery logged to the open-loops ledger.
+## Definition of Done (atomic — same pass, when those artifacts exist)
+working result + proportionate proof + durable project truth updated where the work changed it. For an
+established feature, this includes the complete approved lifecycle and its failure cases. For an uncertain
+idea, "done" means the experiment produced enough evidence to make the next decision; it does not mean the
+speculative product is shipped. A tiny local change does not earn register churn when it changes no durable
+project state.
 
 **The done-report routes by audience.** The adapter and the chat are different channels with different
 readers. The technical trace — what changed, where, why, `file:line` — is written *to future sessions*
@@ -67,6 +74,17 @@ Size every tool/process to its real load. Watch for "a bicycle with a bike engin
 caterpillar" — over-built machinery for a light job (or the reverse). Catch the mismatch early; prefer
 thin artifacts + strong reflexes over ceremony. **Right-tool-for-cost** is part of this: match the work to
 the cheapest tool that does it well; reserve premium/scarce capacity for high-leverage work.
+
+**Size by certainty, not by appetite.**
+
+| Work | Commitment | Proof |
+|---|---|---|
+| Small and established | direct change | focused verification |
+| Product idea uncertain | smallest complete experiment | evidence that can change the product decision |
+| Requirement established | complete required lifecycle | end-to-end, failure, permission and reversal checks that apply |
+| Broad or high-risk | explicit acceptance + outside read | independent evidence proportionate to blast radius |
+
+Right-sizing reduces process and speculative scope. It does not rename incomplete established work as an MVP.
 
 ## Tool-agnostic truth (multiple tools may contribute)
 Work may arrive via different tools/sessions. The **code + STATE doc/git are the truth** — never assume one
@@ -110,12 +128,17 @@ what is left · rulings already made, so they are not relitigated · paths owned
 each exclusive resource and its holder · the standard of done · the shape of the report back.
 Paths-forbidden is mandatory before all else: it is the field that makes a misrouted brief contradict
 itself on arrival at the wrong recipient — detection by structure, not vigilance.
+The checklist is **bounded sufficient context**: enough destination, decisions and evidence requirements
+for the worker to finish independently; no unrelated history and no expectation that the worker infer the
+lead's unstated standard. The report returns evidence. The lead verifies it before relaying completion.
 
 **The lead is audited too.** Nothing else checks the node whose errors travel furthest — in the first
 run every material save came from below, and every bad call was the lead asserting from a check that
-could not have found the truth. So the outside read runs on a count, not a feeling: the STATE doc
-carries `last outside read: <date>`; when it is more than **5 working sessions or 3 days** old and the
-lead is about to take new scope, propose the read first (operating-rules A10). And corrections flowing
+could not have found the truth. So the outside read runs on a count plus blast radius, not a feeling: the
+STATE doc carries `last outside read: <date>`; when it is more than **5 working sessions or 3 days** old
+and the lead is about to take broad, release-bound, security-sensitive, data-changing, or multi-owner
+scope, propose the read first (operating-rules A10). Bounded local work uses focused local verification
+instead. And corrections flowing
 upward are first-class, not politeness: a finding that the **method** is wrong goes to the ledger as
 `direction` grain or through the tooling channel — the bar for keeping one is that it changed what the
 lead did.

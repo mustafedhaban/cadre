@@ -1,6 +1,6 @@
 ---
 name: inspo
-description: Full inspiration-to-prototype workflow for design and frontend tasks. Searches 4,235 structurally tagged real-world screenshots in the local library, selects references that are provably divergent across 9 structural axes, generates 3–5 high-fidelity clickable HTML prototypes with wired navigation, presents them in an interactive canvas switcher, refines the chosen one in-place, then writes a DESIGN.md handoff spec. Runs automatically on any design or frontend brief. Trigger words: "inspo", "check the library", "find references", "grab inspiration", "build N pages", or any design brief.
+description: "Full inspiration-to-prototype workflow for design and frontend tasks. Searches 4,235 structurally tagged real-world screenshots in the local library, selects references that are provably divergent across 9 structural axes, generates 3–5 high-fidelity clickable HTML prototypes with wired navigation, presents them in an interactive canvas switcher, refines the chosen one in-place, then writes a DESIGN.md handoff spec. Runs automatically on any design or frontend brief. Trigger words: \"inspo\", \"check the library\", \"find references\", \"grab inspiration\", \"build N pages\", or any design brief."
 ---
 
 # inspo — intake → references → divergence → prototypes → canvas → refine → handoff

@@ -54,7 +54,15 @@ settings = json.load(open(sp)) if os.path.exists(sp) else {}
 frag = json.load(open(fp))["hooks"]
 hooks = settings.setdefault("hooks", {})
 for event, groups in frag.items():
-    cur = hooks.setdefault(event, [])
+    # Strip cadre's own commands from existing groups first, so a group that
+    # changed in the fragment replaces its old copy instead of sitting beside it.
+    ours = {h.get("command") for g in groups for h in g.get("hooks", [])}
+    cur = []
+    for g in hooks.get(event, []):
+        kept = [h for h in g.get("hooks", []) if h.get("command") not in ours]
+        if kept:
+            cur.append(dict(g, hooks=kept))
+    hooks[event] = cur
     for g in groups:
         if g not in cur:
             cur.append(g)

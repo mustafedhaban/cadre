@@ -1,0 +1,14 @@
+{
+  "_about": "Frontmatter cadre re-applies to skills and agents it does not own, so a third-party update cannot undo the routing. Paths are relative to ~/.claude. cadre sync applies; cadre status flags any that were reverted.",
+  "frontmatter": {
+    "skills/design-flow/SKILL.md": { "disable-model-invocation": "true" },
+    "skills/frontend-design/SKILL.md": { "disable-model-invocation": "true" },
+    "skills/brief-to-tasks/SKILL.md": { "disable-model-invocation": "true" },
+    "skills/personal-workflow-orchestrator/SKILL.md": { "disable-model-invocation": "true" },
+    "agents/testing-accessibility-auditor.md": { "model": "sonnet" },
+    "agents/testing-api-tester.md": { "model": "sonnet" },
+    "agents/testing-evidence-collector.md": { "model": "sonnet" },
+    "agents/testing-performance-benchmarker.md": { "model": "sonnet" },
+    "agents/testing-reality-checker.md": { "model": "sonnet" }
+  }
+}

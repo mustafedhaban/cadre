@@ -151,6 +151,20 @@ else:
         drift.append("core: %d file(s) changed in the repo since the last lay-down (e.g. %s)"
                      % (len(changed), ", ".join(sorted(changed)[:3])))
 
+ov = load(os.path.join(repo, "claude", "overrides.json")) or {}
+undone = []
+for rel, keys in ov.get("frontmatter", {}).items():
+    p = os.path.join(home, rel)
+    if not os.path.isfile(p):
+        continue
+    head = open(p).read().split("\n---", 1)[0].split("\n")
+    for k, v in keys.items():
+        if "%s: %s" % (k, v) not in head:
+            undone.append(rel)
+            break
+if undone:
+    drift.append("overrides: %d reverted by an update (e.g. %s)" % (len(undone), ", ".join(undone[:3])))
+
 pman = load(os.path.join(home, ".packs-manifest.json")) or {}
 pdest = os.path.join(home, "packs")
 if packs_repo and os.path.isdir(pdest):

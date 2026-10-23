@@ -73,6 +73,35 @@ print("  wired hooks into settings.json (merged; backup kept)")
 PY
 fi
 
+# Re-apply frontmatter overrides to skills/agents cadre does not own (see overrides.json).
+if [ -f "$SRC/overrides.json" ]; then
+  python3 - "$SRC/overrides.json" "$DEST" <<'PY'
+import json, os, sys
+ov, dest = json.load(open(sys.argv[1])), sys.argv[2]
+applied = missing = 0
+for rel, keys in ov.get("frontmatter", {}).items():
+    p = os.path.join(dest, rel)
+    if not os.path.isfile(p):
+        missing += 1
+        continue
+    lines = open(p).read().split("\n")
+    if lines[0] != "---" or "---" not in lines[1:]:
+        missing += 1
+        continue
+    end = lines.index("---", 1)
+    for k, v in keys.items():
+        hit = [i for i in range(1, end) if lines[i].startswith(k + ":")]
+        if hit:
+            lines[hit[0]] = "%s: %s" % (k, v)
+        else:
+            lines.insert(end, "%s: %s" % (k, v))
+            end += 1
+    open(p, "w").write("\n".join(lines))
+    applied += 1
+print("  applied overrides to %d file(s)%s" % (applied, " (%d not installed, skipped)" % missing if missing else ""))
+PY
+fi
+
 # Record where the repo lives + what this install laid down (for `cadre status/sync`).
 ROOT="$(dirname "$SRC")"
 python3 - "$SRC" "$ROOT" <<'PY'
